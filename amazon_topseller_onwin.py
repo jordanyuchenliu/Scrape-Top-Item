@@ -19,7 +19,7 @@ def hasXpath(driver, xpath):
 
 
 def init_driver():
-    chrome_path = "/Users/jordanliu/Desktop/Code/chromedriver"
+    chrome_path = "chrome_driver_path"
 
     #chrome_path = r'C:\Users\Jordan\Desktop\chromedriver'
     chrome_options = Options()
@@ -113,6 +113,6 @@ data.insert(2, 'Amazon Price', price_list)
 
 
 driver.close()
-writer = pd.ExcelWriter('/Users/jordanliu/Desktop/google_drive/amazon/min_quant/AmazonTopSellerB', engine = 'xlsxwriter')
+writer = pd.ExcelWriter('final_path', engine = 'xlsxwriter')
 data.to_excel(writer)
 writer.save()
